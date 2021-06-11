@@ -1,0 +1,17 @@
+.card--st-gp-lists {
+  &:hover,
+  &:focus {
+    .card-footer {
+      color: $text-secondary;
+    }
+  }
+  .card-img-top {
+    height: auto;
+  }
+  .card-footer {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 600;
+    color: $text-primary;
+  }
+}

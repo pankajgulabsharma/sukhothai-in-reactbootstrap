@@ -1,0 +1,63 @@
+@import "../../styles/colors";
+
+.mapContainer {
+    height: 400px;
+    margin-bottom: 20px;
+}
+
+.input {
+    background: $dark-purple;
+    color: $yellow;
+    &::placeholder {
+    }
+}
+
+.form {
+    background: $dark-purple;
+    margin-bottom: 2rem;
+}
+
+.locations {
+    height: 400px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    margin-bottom: 20px;
+    /* width */
+    &::-webkit-scrollbar {
+	width: 7px;
+    }
+
+    /* Track */
+    &::-webkit-scrollbar-track {
+	background: $yellow;
+    }
+
+    /* Handle */
+    &::-webkit-scrollbar-thumb {
+	background: $dark-purple;
+    }
+
+    /* Handle on hover */
+    &::-webkit-scrollbar-thumb:hover {
+	background: $dark-purple;
+    }
+}
+
+.location {
+    background-color: $purple;
+    border: none;
+    border-bottom: 1px dashed $yellow;
+}
+
+.lead {
+    color: $yellow;
+}
+
+.head {
+    color: $pink;
+    h3 {
+	span {
+	    color: $yellow;
+	}
+    }
+}

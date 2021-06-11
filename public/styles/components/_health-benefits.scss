@@ -1,0 +1,52 @@
+.health-benefit-carousel {
+    .slick-track {
+        display: flex;
+    }
+    .slick-list {
+        margin: 0 -10px;
+    }
+    .slick-slide {
+        height: auto;
+        margin: 0 10px;
+        > div {
+            height: 100%;
+        }
+    }
+    .slick-prev,
+    .slick-next {
+        width: 40px;
+        height: 40px;
+        z-index: 1;
+        top: 100px;
+        &::before {
+            height: 40px;
+            width: 40px;
+            background-color: $bg-secondary;
+            border-radius: 100%;
+            font-family: $icomoon-font-family;
+            @include opacity(1);
+            color: #000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        &:hover,
+        &:focus {
+            &::before {
+                background-color: $bg-ternary;
+            }
+        }
+    }
+    .slick-prev {
+        left: 1rem;
+        &::before {
+            content: $st-icon-prev-arrow;
+        }
+    }
+    .slick-next {
+        right: 1rem;
+        &::before {
+            content: $st-icon-next-arrow;
+        }
+    }
+}

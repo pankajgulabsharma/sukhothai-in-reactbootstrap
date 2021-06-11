@@ -1,0 +1,18 @@
+@import "../../public/styles/helpers/variables";
+@import "../../public/styles/helpers/mixins";
+
+.appointment_button {
+    background-color: $bg-ternary;
+    color: #fff !important;
+    @include breakpoint(desktop-min) {
+        margin-left: 0.5rem;
+    }
+    &:hover {
+        background-color: $bg-primary-dark;
+    }
+}
+
+.active_header {
+    color: #ee018c !important;
+    background-color: #1f1229;
+}

@@ -1,0 +1,25 @@
+.about-us-gallery-lists {
+  @include breakpoint(mobile-max) {
+    display: flex;
+    margin-top: 3rem;
+    overflow-x: auto;
+  }
+  > li {
+    @include breakpoint(ipad-min) {
+      &:not(:last-child) {
+        margin-bottom: 1rem;
+      }
+    }
+    @include breakpoint(mobile-max) {
+      min-width: 280px;
+      width: 280px;
+      &:not(:last-child) {
+        margin-right: 2rem;
+      }
+      img {
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+}

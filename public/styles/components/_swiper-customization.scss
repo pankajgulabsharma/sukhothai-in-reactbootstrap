@@ -1,0 +1,91 @@
+.swiper {
+    $self: &;
+
+    &--equal-height {
+        .swiper-slide {
+            height: auto;
+
+            &>div {
+                height: 100%;
+            }
+        }
+    }
+
+    &-button-next,
+    &-button-prev {
+        color: $text-primary;
+
+        &::after {
+            font-size: 2rem;
+        }
+    }
+
+    &--nav-style-1 {
+
+        #{$self}-button-next,
+        #{$self}-button-prev {
+            height: 40px;
+            width: 40px;
+            background-color: $bg-secondary;
+            border-radius: 100%;
+            color: #000;
+        }
+    }
+
+    &--nav-top {
+        #{$self}-container {
+            padding-top: 50px;
+            margin-top: -50px;
+        }
+
+        #{$self}-button-next,
+        #{$self}-button-prev {
+            top: 0;
+            margin-top: 0;
+        }
+
+        #{$self}-button-next {
+            right: 0;
+        }
+
+        #{$self}-button-prev {
+            left: auto;
+            right: 50px;
+        }
+    }
+
+    &-pagination-bullet {
+        width: 10px;
+        height: 10px;
+        background-color: transparent;
+        border: 2px solid $border-primary;
+        @include opacity(1);
+
+        &-active {
+            background-color: $bg-ternary;
+            border-color: $border-primary;
+        }
+    }
+
+    &-pagination--right {
+        #{$self}-container {
+            padding-bottom: 30px;
+        }
+
+        #{$self}-pagination {
+            left: auto;
+            right: 0;
+            bottom: 0;
+            width: auto;
+        }
+    }
+}
+
+.swiper-wrapper{
+    @include breakpoint(ipad-max) {
+                display: block;
+                width: 100%;
+                margin-bottom:5%;
+                margin-right: 0;
+    }
+}

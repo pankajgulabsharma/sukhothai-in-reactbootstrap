@@ -1,0 +1,171 @@
+.gift-card-table {
+  tr {
+    th,
+    td {
+      &:first-child,
+      &:nth-child(3),
+      &:nth-child(4),
+      &:last-child {
+        @include breakpoint(ipad-min) {
+          text-align: center;
+        }
+      }
+    }
+
+    th,
+    td {
+      &:nth-child(5) {
+        @include breakpoint(ipad-min) {
+          text-align: right;
+        }
+      }
+    }
+
+    td {
+      &:first-child,
+      &:nth-child(2),
+      &:nth-child(5) {
+        @include breakpoint(ipad-min) {
+          white-space: nowrap;
+        }
+      }
+    }
+
+    th {
+      text-transform: uppercase;
+    }
+  }
+}
+
+.gift-deal-code-table {
+  margin-bottom: 5rem;
+
+  tr {
+    th,
+    td {
+      text-align: right;
+    }
+
+    td {
+      width: 180px;
+
+      @include breakpoint(mobile-max) {
+        width: 150px;
+      }
+    }
+  }
+}
+
+.giftmyself-checkbox {
+  @include breakpoint(mobile-min) {
+    height: 37px;
+  }
+}
+
+.gift-card-form__title {
+  color: $text-secondary;
+  margin-bottom: 1.5rem;
+  font-family: $fonts-secondary;
+}
+
+.number-gift-box-wrap {
+  margin-bottom: 2rem;
+}
+
+.number-gift-box {
+  padding: 1rem;
+  background-color: $bg-primary-dark;
+
+  + .number-gift-box {
+    margin-top: 1rem;
+  }
+}
+
+@include breakpoint(mobile-max) {
+  .gift-card-table table,
+  .gift-card-table thead,
+  .gift-card-table tbody,
+  .gift-card-table th,
+  .gift-card-table td,
+  .gift-card-table tr {
+    display: block;
+  }
+
+  .gift-card-table thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+
+  .gift-card-table tr {
+    border: 1px solid $border-secondary-dark;
+    margin-bottom: 5px;
+  }
+
+  .gift-card-table td {
+    border: none;
+    border-bottom: 1px solid $border-secondary-dark;
+    position: relative;
+    padding-left: 40% !important;
+  }
+
+  .gift-card-table td:before {
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    width: 40%;
+    padding-right: 10px;
+    white-space: nowrap;
+    font-weight: bold;
+  }
+
+  .gift-card-table td:after {
+    position: absolute;
+    content: ":";
+    left: 36%;
+    top: 6px;
+    font-weight: bold;
+  }
+
+  .gift-card-table td:nth-of-type(6):after {
+    position: absolute;
+    content: " ";
+    left: 36%;
+    top: 6px;
+    font-weight: bold;
+  }
+
+  .gift-card-table td:nth-of-type(1):before {
+    content: "Code";
+  }
+
+  .gift-card-table td:nth-of-type(2):before {
+    content: "Therapy Type";
+  }
+
+  .gift-card-table td:nth-of-type(3):before {
+    content: "Therapist";
+  }
+
+  .gift-card-table td:nth-of-type(4):before {
+    content: "Minutes";
+  }
+
+  .gift-card-table td:nth-of-type(5):before {
+    content: "INR";
+  }
+
+  .gift-card-table td:nth-of-type(6):before {
+    content: "Qty";
+  }
+}
+
+.was-validated .form-control:invalid,
+.form-control.is-invalid {
+  border-color: $border-primary;
+  background-image: none;
+
+  &:focus {
+    box-shadow: none;
+  }
+}

@@ -1,0 +1,133 @@
+.mobile-hz-scroll {
+    @include breakpoint(mobile-max) {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch; /* Lets it scroll lazy */
+    }
+}
+.ipad-hz-scroll {
+    @include breakpoint(ipad-max) {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch; /* Lets it scroll lazy */
+    }
+}
+.card {
+    background-color: $bg-primary-dark;
+    $self: &;
+
+    &--transparent {
+        background-color: transparent;
+        border: none;
+        #{$self}-footer {
+            border-top: none;
+        }
+
+        #{$self}-footer {
+            background-color: transparent;
+        }
+    }
+
+    &--img-animation {
+        &:hover {
+            #{$self}-img-top {
+                img {
+                    transform: scale(1.2);
+                }
+            }
+        }
+    }
+
+    &-img-top {
+        height: 210px;
+        overflow: hidden;
+        position: relative;
+        img {
+            height: 100%;
+            object-fit: cover;
+            @include transition();
+        }
+    }
+
+    &-body {
+        padding: 2rem;
+
+        p {
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    &__badge {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        background-color: $bg-ternary;
+        color: #fff;
+        padding: 5px;
+        font-weight: 700;
+        font-size: 1.2rem;
+    }
+    
+    &-title {
+        color: $text-secondary;
+        font-family: $fonts-secondary;
+        text-transform: uppercase;
+        font-size: 2rem;
+        font-weight: 700;
+        margin-bottom: 1.5rem;
+    }
+
+    &__ratings {
+        display: flex;
+        justify-content: center;
+        > li {
+            &:not(:last-child) {
+                margin-right: 0.5rem;
+            }
+            &:empty {
+                display: none;
+            }
+        }
+    }
+
+    &--location {
+        #{$self}-footer {
+            font-size: 2.5rem;
+            font-weight: 600;
+        }
+    }
+
+    &--testimonial {
+        background-color: transparent;
+        border: 1px solid $border-primary;
+        margin-top: 70px;
+        padding-top: 40px;
+        height: calc(100% - 70px);
+        #{$self}-img-top {
+            @include center(horizontal);
+            top: -50px;
+            background: #ffffff url("/images/sukhothai-flower.png") no-repeat center 
+            center;
+            background-size: 90%;
+            height: 100px;
+            width: 100px;
+            border-radius: 100%;
+        }
+        #{$self}-body {
+            text-align: center;
+        }
+        #{$self}__ratings {
+            margin-bottom: 1rem;
+        }
+        #{$self}-title {
+            font-size: 1.7rem;	
+        }
+        #{$self}-footer {
+            padding: 1rem;
+            font-weight: 600;
+            text-align: right;
+            background-color: $bg-primary-dark;
+        }
+    }
+}

@@ -1,0 +1,90 @@
+h1, 
+h2, 
+h3, 
+h4, 
+h5, 
+h6, 
+.h1, 
+.h2, 
+.h3, 
+.h4, 
+.h5, 
+.h6 {
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+h1 {
+    font-size: 3.5rem;
+}
+
+h2 {
+    font-size: 2.8rem;
+}
+
+h3 {
+    font-size: 2.4rem;
+}
+
+h4 {
+    font-size: 2.1rem;
+}
+
+h1,
+h2,h4 {
+    color: $text-secondary;
+}
+
+h5 {
+    font-size: 1.8rem;
+}
+
+a {
+    color: $link-color-primary;
+    &:hover,
+    &:focus {
+        color: $link-color-secondary;
+        text-decoration: none;
+    }
+    &.text-primary {
+        &:hover,
+        &:focus {
+            color: $text-primary !important;
+        }
+    }
+}
+
+iframe {
+    max-width: 100%;
+}
+  
+b, strong {
+    font-weight: bold;
+}
+
+.text {
+    &-primary {
+        color: $text-primary !important;
+    }
+    &-secondary {
+        color: $text-secondary !important;
+    }
+    &-link-primary {
+        color: $text-primary;
+        &:hover,
+        &:focus {
+            color: $text-primary;
+        }
+    }
+    &-danger{
+        color: #ed1c24;
+    }
+}
+
+.bg-primary {
+    background-color: $bg-primary !important;
+}
+
+p {
+    margin-bottom: 1.4rem;
+}

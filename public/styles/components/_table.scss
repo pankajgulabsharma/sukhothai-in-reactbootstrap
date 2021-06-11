@@ -1,0 +1,20 @@
+
+.table {
+    thead {
+        th {
+            border-bottom-width: 1px;
+            border-bottom-color: #562858;
+            background-color: #562858;
+            font-weight: 600;
+            color: $text-primary;
+        }
+    }
+    &-bordered {
+        border-color: #562858;
+        th,
+        td {
+            border-color: #562858;
+            color: $text-primary;
+        }
+    }
+}

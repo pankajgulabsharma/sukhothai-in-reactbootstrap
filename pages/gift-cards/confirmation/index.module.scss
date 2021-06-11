@@ -1,0 +1,48 @@
+@import "../../../styles/colors";
+
+.table {
+    thead {
+	tr {
+	    th {
+		background: $dark-pink;
+		border: 1px solid $dark-pink;
+	    }
+	}
+    }
+    tbody {
+	color: $yellow;
+	tr {
+	    td {
+		border: 1px solid $dark-pink;
+	    }
+	}
+    }
+}
+
+.recheck {
+    thead {
+	tr {
+	    th {
+		background: $purple;
+		border: 1px solid $dark-pink;
+	    }
+	}
+    }
+    tbody {
+	color: $yellow;
+	tr {
+	    td {
+		border: 1px solid $dark-pink;
+		.input {
+		    background: black;
+		    border: 1px solid $yellow;
+		    color: $yellow;
+		}
+	    }
+	}
+    }
+}
+
+.pink {
+    color: $pink;
+}

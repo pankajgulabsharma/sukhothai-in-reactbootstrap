@@ -1,0 +1,52 @@
+.offer-top-row {
+  &__text {
+    margin-left: 15px;
+    font-size: 2rem;
+
+    @media (max-width: 767px) {
+      margin-top: 15px;
+    }
+  }
+
+  @media (max-width: 767px) {
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+.card {
+  &-body {
+    text-align: left;
+  }
+}
+
+.contact-lists {
+  > li {
+    display: flex;
+    + li {
+      margin-top: 1rem;
+    }
+  }
+
+  &__icon-box {
+    min-width: 30px;
+    width: 30px;
+    height: 30px;
+    border: 1px solid $border-primary;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 1rem;
+    border-radius: 100%;
+  }
+
+  a {
+    color: $text-primary;
+
+    &:hover,
+    &:focus {
+      color: $text-secondary;
+    }
+  }
+}

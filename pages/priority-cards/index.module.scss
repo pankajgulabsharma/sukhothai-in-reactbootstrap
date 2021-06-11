@@ -1,0 +1,69 @@
+@import '../../styles/colors';
+
+.title {
+    &::after {
+	content: "";
+	margin: auto;
+	margin-top: 10px;
+	display: block;
+	background: $pink;
+	height: 1px;
+	width: 100px;
+    }
+}
+
+.table {
+    color: $yellow;
+    border: 1px solid $dark-pink;
+    margin: 10px auto;
+    font-weight: bold;
+    thead {
+	background-color: $dark-pink;
+	tr {
+	    th {
+		border-color: $dark-pink;
+		background-color: $dark-pink;
+		padding: 7px;
+		text-align: center;
+	    }
+	}
+    }
+    tbody {
+	tr {
+	    td {
+		border: 1px solid $dark-pink;
+		padding: 7px;
+		text-align: center;
+	    }
+	}
+    }
+}
+
+.form {
+    border: 1px solid $dark-pink;
+}
+
+.sidebar {
+    font-size: 25px;
+    h1 {
+	font-size: 40px;
+	color: $yellow;
+    }
+}
+
+.pink {
+    color: $pink;
+}
+
+.input {
+    background-color: $purple;
+    color: $yellow;
+    height: auto;
+    &:focus {
+	background-color: $purple;
+	color: $yellow;
+    }
+    &::placeholder {
+	color: #8E810D;
+    }
+}

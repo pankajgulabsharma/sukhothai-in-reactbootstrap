@@ -1,0 +1,58 @@
+body {
+    &.modal-open {
+        overflow-y: hidden;
+        position: relative;
+        &:after {
+            position: fixed;
+            content: "";
+            background-color: rgba(0,0,0,.8);
+            height: 100%;
+            width: 100%;
+            z-index: 1031;
+            left: 0;
+            top: 0;
+        }
+        .modal {
+            overflow-y: auto;
+        }
+    }
+}
+
+.video-play-modal {
+    .modal-content {
+        border: none;
+        background-color: transparent;
+    }
+    .modal-header {
+        border-bottom: none;
+        margin-bottom: 1rem;
+    }
+    .modal-body {
+        padding: 0;
+        background-color: transparent;
+        height: 300px;
+        border: 2px solid $border-primary;
+    }
+    .close {
+        font-weight: 400;
+        @include opacity(1);
+        text-shadow: none;
+        font-size: 2rem;
+        background-color: #fff;
+        color: #000;
+        height: 30px;
+        width: 30px;
+        border-radius: 100%;
+        &:not(:disabled):not(.disabled) {
+            &:hover,
+            &:focus {
+                background-color: $bg-secondary;
+                @include opacity(1);
+            }
+        }
+        span {
+            line-height: 0.6;
+            display: block;
+        }
+    }
+}

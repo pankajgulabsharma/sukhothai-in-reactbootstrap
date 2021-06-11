@@ -1,0 +1,76 @@
+.btn {
+    font-size: 1.4rem;
+    border-radius: 0;
+    padding: 0.5rem 1rem;
+    &-lg {
+        font-size: 1.8rem;
+        padding: 1rem;
+    }
+    &-primary {
+        background-color: $bg-ternary;
+        color: #fff;
+        border-color: $border-secondary;
+        &:hover,
+        &:focus,
+        &.focus {
+            background-color: $bg-primary-dark;
+            border-color: $bg-primary-dark;
+        }
+        &:focus,
+        &.focus {
+            box-shadow: 0 0 0 0.2rem rgba(238, 1, 140, 0.5);
+        }
+        &:not(:disabled) {
+            &:not(.disabled) {
+                &:active,
+                &.active {
+                    @include background-color-rgba($bg-ternary, 0.5);
+                    @include border-rgba($border-secondary, 0.5);
+                    &:focus {
+                        box-shadow: 0 0 0 0.2rem rgba(238, 1, 140, 0.5);
+                    }
+                }
+            }
+        }
+        &.disabled,
+        &:disabled {
+            background-color: $bg-ternary;
+            color: #fff;
+            border-color: $border-secondary;
+        }
+    }
+    &-outline-secondary {
+        border-color: $border-secondary;
+    }
+    &-primary-outline {
+        border: 1px solid $border-secondary;
+        border-radius: 0;
+        color: $text-secondary !important;
+        background-color: transparent !important;
+        &:hover,
+        &:focus {
+            background-color: $bg-primary-dark;
+            border-color: $border-secondary;
+        }
+    }
+    &-text {
+        color: $text-secondary;
+        &:hover,
+        &:focus,
+        &.focus {
+            color: $text-primary;
+        }
+        &:focus,
+        &.focus {
+            box-shadow: none;
+        }
+        &:not(:disabled) {
+            &:not(.disabled) {
+                &:active,
+                &.active {
+                    box-shadow: none;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,65 @@
+.owl-equal-height {
+    .owl-stage {
+        display: flex;
+    }
+}
+
+.owl-theme {
+    .owl-dots {
+        .owl-dot {
+            span {
+                background-color: transparent;
+                border: 2px solid $border-primary;
+            }
+            &:hover,
+            &.active {
+                span {
+                    background-color: $bg-secondary;
+                }
+            }
+        }
+    }
+}
+
+.owl-nav-design {
+    .owl-theme {
+        .owl-nav {
+            [class*='owl-'] {
+                background-color: transparent;
+                color: $text-primary;
+                &:hover {
+                    background-color: transparent;
+                }
+            }
+        }
+    }
+    &--style-1 {
+        .owl-theme {
+            .owl-nav {
+                margin-top: 0;
+                [class*='owl-'] {
+                    position: absolute;
+                    top: 90px;
+                    height: 40px;
+                    width: 40px;
+                    background-color: $bg-secondary;
+                    border-radius: 100%;
+                    color: #000;
+                    display: inline-flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin: 0;
+                    &:hover {
+                        background-color: $bg-ternary;
+                    }
+                }
+                .owl-prev {
+                    left: 10px;
+                }
+                .owl-next {
+                    right: 10px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,43 @@
+.slick-dots {
+    li {
+        width: 10px;
+        height: 10px;
+        button {
+            &::before {
+                content: "";
+                border: 2px solid $border-primary;
+                background-color: transparent;
+                width: 10px;
+                height: 10px;
+                border-radius: 100%;
+                @include opacity(1);
+            }
+        }
+        &.slick-active {
+            button {
+                &::before {
+                    @include opacity(1);
+                    background-color: $bg-secondary;
+                }
+            }
+        }
+    }
+}
+.testimonial-carousel {
+    .slick-track {
+        display: flex;
+    }
+    .slick-list {
+        margin: 0 -10px;
+    }
+    .slick-slide {
+        height: auto;
+        margin: 0 10px;
+        > div {
+            height: 100%;
+            > div {
+                height: 100%;
+            }
+        }
+    }
+}

@@ -1,0 +1,35 @@
+@import '../../styles/colors';
+
+.borderPink {
+    border: 1px solid $dark-pink;
+}
+
+.table {
+    thead {
+	tr {
+	    th {
+		border: 1px solid $dark-pink;
+		color: $yellow;
+	    }
+	}
+    }
+    tbody {
+	tr {
+	    td {
+		padding: 5px;
+		border: 1px solid $dark-pink;
+		color: $yellow;
+		font-weight: bold;
+	    }
+	}
+    }
+}
+
+.link {
+    &:link {
+	color: $yellow;
+	border-bottom: 1px solid $yellow
+    }
+    border-bottom: none;
+    color: $pink;
+}

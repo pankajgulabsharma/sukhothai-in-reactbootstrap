@@ -1,0 +1,22 @@
+.border_width {
+  border: 2px solid #eaad4e !important;
+  width: 80px;
+  height: 80px;
+}
+.background_color {
+  background-color: #311d40;
+}
+.link_color {
+  color: #eaad4e;
+  transition: transform 0.5s;
+  border-bottom: none;
+
+  &:hover {
+    color: #ee018c !important;
+    border-bottom: 1px solid ee018c;
+    transform: scale(1.1);
+  }
+}
+.text_color {
+  color: #eaad4e;
+}

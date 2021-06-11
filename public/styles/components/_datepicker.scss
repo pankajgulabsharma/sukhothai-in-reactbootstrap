@@ -1,0 +1,101 @@
+.bs {
+    &-datepicker {
+        box-shadow: none;
+    }
+    &-datepicker-head {
+        background-color: $bg-secondary !important;
+    }
+    &-datepicker-container {
+        padding: 0;
+    }
+    &-datepicker-head {
+        border-radius: 0;
+        button {
+            color: #000;
+            &.next,
+            &.previous {
+                span {
+                    background-color: $bg-primary-dark;
+                    line-height: 0.9;
+                    color: #fff;
+                }
+            }
+            &[disabled] {
+                @include opacity(0.5);
+            }
+        }
+    }
+    &-datepicker-body {
+        table {
+            th {
+                color: #000;
+                font-weight: 600;
+            }
+            td {
+                color: #000;
+                &.week {
+                    span {
+                        color:$text-secondary-dark;
+                    }
+                }
+                span {
+                    &.selected {
+                        background-color: $bg-ternary !important;
+                    }
+                    &[class*="select-"] {
+                        *:after {
+                            background-color: $bg-secondary;
+                        }
+                    }
+                    &.is-highlighted,
+                    &.today {
+                        &:not(.disabled):not(.selected) {
+                            background-color: $bg-secondary;
+                        }
+                    }
+                }
+                &.selected {
+                    span {
+                        background-color: $bg-secondary;
+                    }
+                }
+                &[class*="select-"] {
+                    span {
+                        &:after {
+                            background-color: $bg-secondary;
+                        }
+                    }
+                }
+                &.is-highlighted {
+                    &:not(.disabled):not(.selected) {
+                        span {
+                            background-color: $bg-secondary;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &-datepicker-buttons {
+        padding: 5px;
+        .btn {
+            font-size: 1.3rem;
+            line-height: 1;
+        }
+        .btn-today-wrapper {
+            .btn {
+                background-color: $bg-secondary;
+                border: 1px solid $border-primary;
+                color: #000;    
+            }
+        }
+        .btn-clear-wrapper {
+            .btn {
+                background-color: transparent;
+                color: #000 ;
+                border: 1px solid #000;
+                color: #000;
+            }
+        }
+    }
+}

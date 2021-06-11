@@ -1,0 +1,29 @@
+@import "../../styles/colors";
+
+.table {
+    color: $pink;
+    thead {
+	tr {
+	    th {
+		border: 1px solid $dark-pink;
+		background-color: $dark-pink;
+		color: $yellow;
+	    }
+	}
+    }
+    tbody {
+	tr {
+	    td {
+		border: 1px solid $dark-pink;
+	    }
+	}
+    }
+}
+
+.dnone {
+    display: none;
+}
+
+.dtable {
+    display: table;
+}

@@ -1,0 +1,122 @@
+.three-col-layout {
+  display: flex;
+  @include breakpoint(ipad-min) {
+    flex-flow: row wrap;
+  }
+  > li {
+    @include breakpoint(ipad-min) {
+      width: 49%;
+      margin-right: 2%;
+      margin-bottom: 2%;
+      &:nth-child(2n) {
+        margin-right: 0;
+      }
+    }
+    @include breakpoint(desktop-min) {
+      width: 32%;
+      margin-right: 2%;
+      margin-bottom: 2%;
+      &:nth-child(2n) {
+        margin-right: 2%;
+      }
+      &:nth-child(3n) {
+        margin-right: 0;
+      }
+    }
+    @include breakpoint(mobile-max) {
+      min-width: 280px;
+      width: 280px;
+      margin-right: 20px;
+    }
+    @include breakpoint(custom-small-mobile-max) {
+      min-width: 240px;
+      width: 240px;
+    }
+  }
+  .card {
+    &-body {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+    }
+    &-footer {
+      padding: 0;
+      .btn {
+        display: block;
+        text-align: center;
+      }
+    }
+  }
+  .btn {
+    color: $text-primary;
+    &:hover,
+    &:focus {
+      color: $text-secondary;
+    }
+  }
+}
+
+.four-col-layout {
+  display: flex;
+  @include breakpoint(ipad-min) {
+    flex-flow: row wrap;
+  }
+  > li {
+    @include breakpoint(ipad-min) {
+      width: 23.5%;
+      margin-right: 2%;
+      margin-bottom: 2%;
+      &:nth-child(4n) {
+        margin-right: 0;
+      }
+    }
+    @include breakpoint(mobile-max) {
+      min-width: 280px;
+      width: 280px;
+      margin-right: 20px;
+    }
+    @include breakpoint(custom-small-mobile-max) {
+      min-width: 240px;
+      width: 240px;
+    }
+  }
+  .card {
+    &-body {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+    }
+    &-footer {
+      padding: 0;
+      .btn {
+        display: block;
+        text-align: center;
+      }
+    }
+  }
+  .btn {
+    color: $text-primary;
+    &:hover,
+    &:focus {
+      color: $text-secondary;
+    }
+  }
+}
+
+.vertical-scroll {
+  overflow-y: scroll;
+  &::-webkit-scrollbar-track {
+    background-color: $bg-secondary;
+  }
+  &::-webkit-scrollbar {
+    width: 8px;
+    background-color: $bg-secondary;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: #000;
+  }
+}
+
+.agm-info-window-content {
+  color: $text-secondary-dark;
+}

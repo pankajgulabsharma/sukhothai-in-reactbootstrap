@@ -1,0 +1,65 @@
+.accordion {
+    &--style-1 {
+        > .card {
+            margin-bottom: 1rem;
+            border: none;
+            border-radius: 0;
+            .card {
+                background-color: $bg-primary;
+                &-footer {
+                    border-top: 1px solid $border-secondary-dark !important;
+                }
+            }
+            .vertical-col-layout {
+                    display: flex;
+                    flex-wrap: wrap;
+                    height: 370px;
+                    overflow-y: scroll;
+                li {
+                    @include breakpoint(ipad-max) {
+                        display: block;
+                        width: 100%;
+                        margin-bottom:5%;
+                        margin-right: 0;
+                    }
+                    @include breakpoint(mobile-max) {
+                        display: block;
+                        width: 100%;
+                        margin-bottom:5%;
+                        margin-right: 0;
+                    }
+                }
+            }
+        }
+        .card-header {
+            padding: 0;
+            border-color: $border-primary;
+            .btn {
+                display: flex;
+                justify-content: space-between;
+                color: $text-primary;
+                font-weight: 600;
+                padding: 1rem 2rem;
+                font-size: 1.6rem;
+                text-align: left;
+                &:hover,
+                &:focus {
+                    text-decoration: none;
+                }
+                &::after {
+                    font-family: $icomoon-font-family;
+                    content: $st-icon-next-arrow;
+                    display: block;
+                    transform: rotate(90deg);
+                    @include transition();
+                }
+                &[aria-expanded="true"] {
+                    &::after {
+                        transform: rotate(270deg);
+                    }
+                }
+            }
+        }
+    }
+}
+
